@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    
+    <title>Navbar</title>
+   
+  </head>
+  <body>
+    <nav>
+      <div class="logo">NAVBAR</div>
+      <div class="content">
+        <ul class="head">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#" class="log">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h2>Welcome To Navbar</h2>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: sans-serif;
+}
+body{
+    background-color: white;
+}
+h2{
+    text-align: center;
+    margin: 50px;
+}
+.logo{
+    display: inline;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    border-radius: 4px;
+    padding: 8px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: darkblue;
+    padding: 10px;
+    margin-bottom: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.head{
+    display: flex;
+    /* width: 100vw; */
+}
+li{
+    display: inline;
+    font-size: large;
+    color: rgb(238, 231, 149);
+    border-radius: 4px;
+}
+a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: rgb(8, 14, 66);
+  }
+ 
+  li:hover{
+    background-color: bisque;
+}
+a:hover{
+    color: black;
+}
+.log{
+    float: right;
+}
+
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Events</h3>
+        <p id="click">Not Clicked</p>
+        <button onclick="handleClick()">Click</button>
+        <p id="mouse">Mouse Not Over</p>
+        <p>Focus</p>
+        <input type="text" id="focus"/>
+        <p id="change"></p>
+    </div>
+</body>
+<script>
+    function handleClick(){
+        console.log("Clicked")
+        document.getElementById("click").innerHTML = "Clicked";
+    }
+    var p = document.getElementById("click");
+    var m = document.getElementById("mouse");
+    p.addEventListener("mouseover", () => {
+        console.log("mouseover")
+        m.innerText = "MouseOvered";
+    })
+    p.addEventListener("mouseout",() => {
+        console.log("mouseout")
+        m.innerText = "MouseOut";
+    })
+    var x = document.getElementById("focus");
+    var y = document.getElementById("change");
+    x.addEventListener("focus", () => {
+        x.style.background="yellow"
+    })
+    x.addEventListener("keyup",() => {
+        y.innerText = x.value;
+    })
+</script>
+</html>

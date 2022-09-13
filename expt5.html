@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <title>Validate</title>
+    
+  </head>
+  <body>
+    <div class="container box">
+        <h1>Login</h1>
+        <form onsubmit="handleSubmit(); return false">
+            <div class="mb-3">
+                <label for="validationCustom01" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" value="">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="validationCustom01" class="form-label">Mobile No.</label>
+                <input type="number" class="form-control" id="mobile" value="">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(to right, rgba(90, 60, 223, 0.5), rgb(169, 107, 228));
+}
+.box{
+    background-color: white;
+    margin-top: 20%;
+    padding: 20px;
+    border: 1px solid black;
+    width: 40%;
+    border-radius: 5px;
+}
+ 
+ </body>
+  <script>
+    function handleSubmit(){
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var mobile = document.getElementById("mobile").value;
+        email_regex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/
+        console.log(email_regex.test(email));
+        if(name == null || name == ""){
+            alert("Please enter a valid name.");
+        }
+        else if(email_regex.test(email)){
+            alert("Please enter a valid email address.");
+        }
+        else if(email == null || email == ""){
+            alert("Please enter an email address.");
+        }
+        else if(mobile.length != 10 || mobile == 0 || mobile == null){
+            alert("Please enter a valid mobile number.");
+        }
+        else if(password == null || password == ""){
+            alert("Please enter a valid password.");
+        }
+        else{
+            alert("Successful Registeration");
+        }
+    }
+  </script>
+
+</html>
